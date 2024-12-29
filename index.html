@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Sriram Aalapati - Software Developer, Data Scientist, Web Developer
+    </title>
+    <head>
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      </head>
+      
+    <link rel="stylesheet" href="./navbar.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --mobile-menu-color: rgb(0, 221, 255);
+            --mobile-menu-bgcolor: rgb(10, 21, 26);
+            --bgcolor: rgb(16, 37, 44);
+            --text-color: rgb(0, 221, 255);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            color: var(--text-color);
+            max-width: 100vw;
+            height: 100vh;
+            letter-spacing: 1px;
+            overflow-x: hidden;
+            min-width: 320px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;           
+            background-color: var(--bgcolor);
+        }
+
+        .hero-container {
+            width: 100%;
+        }
+
+        .hero-img {
+            user-select: none;
+            width: 80%;
+            justify-self: right;
+        }
+
+        .hero-img img {
+            height: 100%;
+            aspect-ratio: 1/1;
+            transition: all 0.6s;
+
+            @starting-style {
+                transform: translateX(-300px);
+            }
+        }
+
+        .hero-text h2 {
+            color: rgba(0, 221, 255, 0.6);
+        }
+
+        .hero-text a {
+            font-size: 25px;
+            color: var(--text-color);
+            padding: 10px;
+            text-decoration: none;
+            border: 1px solid black;
+
+            border-radius: 10px;
+
+            box-shadow: 2px 2px 10px var(--text-color),
+                -2px -2px 10px var(--text-color);
+            transition: all 0.6s;
+
+            &:hover {
+                color: whitesmoke;
+                box-shadow: 6px 6px 10px whitesmoke, -6px -6px 10px whitesmoke;
+            }
+
+            @starting-style {
+                transform: translateX(-300px);
+            }
+        }
+
+        .hero-text P {
+            user-select: none;
+            font-size: 1.3vw;
+            transition: all 0.6s;
+            letter-spacing: 0.8px;
+
+            @starting-style {
+                transform: translateX(300px);
+            }
+        }
+        .education {
+            
+            display: grid;
+            width: 100%;
+            justify-content: center;
+            gap: 10px;
+
+        }
+        .education p:nth-child(1){
+            text-align: center;
+        }
+        .edu-card {
+            color: var(--text-color);
+            border: 1px solid rgba(76, 23, 190, 0.864);
+            letter-spacing: 1px;
+            line-height: 1.5;
+
+         
+        }
+        .bordercolor{
+            border-bottom: 1px solid var(--text-color);
+        }
+        .skill{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,150px);
+            
+            height:fit-content;
+            gap: 10px ;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .skills1{
+            height: 150px;
+            width: 150px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border: 1.5px solid var(--text-color);
+            i{
+                font-size: 45px;
+               
+            }
+        }
+        .contactme {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+           gap: 15px;
+           color: black;
+           font-size: 30px;
+        }
+
+        @media screen and (max-width: 426px) {
+            .largenav {
+                display: none;
+            }
+
+            .nav-brand {
+                font-size: 8vw;
+            }
+
+            html {
+                scroll-padding-top: 8vh;
+            }
+            body{
+                padding-top: 5vh;
+            }
+
+            nav {
+                height: 5vh;
+            }
+            .mobilemenu{
+                top: 5vh;
+            }
+            .hero-img {
+                height: 250px;
+                width: 250px;
+                justify-self: center;
+            }
+
+            .hero-img img {
+                height: 100%;
+                aspect-ratio: 1/1;
+
+            }
+
+            .hero-container {
+                display: grid;
+                margin-top: 15px;
+                height: calc(100vh - 5vh);
+            }
+
+            .hero-text h1,
+            .hero-text h2 {
+                text-align: center;
+                font-size: 5.5vw;
+            }
+
+            .hero-text P {
+                font-size: 3.8vw;
+                letter-spacing: 0;
+                text-justify: inter-word;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            }
+
+            .hero-text a {
+                font-size: 3vw;
+                border: 1px solid whitesmoke;
+                box-shadow: none;
+                position: relative;
+                z-index: -5;
+                top: -8%;
+
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+            .education{
+                grid-template-rows: repeat(3,auto-fit);
+            }
+            .contactme{
+                font-size: 10vw;
+                color: white;
+            }
+        }
+
+        @media screen and (min-width: 426px) and (max-width: 768px) {
+            .largenav {
+                display: none;
+            }
+
+            html {
+                scroll-padding-top: 9vh;
+            }
+
+            .nav-brand {
+                font-size: 6vw;
+            }
+            body{
+                padding-top: 9vh;
+                
+            }
+
+            nav {
+                height: 9vh;
+            }
+            .mobilemenu{
+                top: 9vh;
+            }
+
+            .hero-img {
+                height: 250px;
+                width: 250px;
+                justify-self: center;
+            }
+
+            .hero-container {
+                height: calc(100vh - 9vh);
+                display: grid;
+                margin-top: 15px;
+
+            }
+
+            .hero-text h1,
+            .hero-text h2 {
+                text-align: center;
+            }
+
+            .hero-text P {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+                font-size: 2vw;
+                margin-left: 2px;
+                letter-spacing: 0;
+                text-justify: inter-word;
+
+            }
+            .education{
+                grid-template-rows: repeat(3,auto-fit);
+            }
+
+        }
+
+        @media screen and (min-height:650px) and (max-width:800px) {
+            .hero-text a {
+
+                position: relative;
+                top: 0.5vh;
+            }
+
+            .hero-img {
+                align-self: center;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .mobile-nav {
+                display: none;
+            }
+
+            nav {
+                height: 9vh;
+            }
+
+            .nav-brand {
+                font-size: 3vw;
+            }
+            body{
+                padding-top: 9vh;
+            }
+
+            html {
+                scroll-padding-top: 9vh;
+            }
+            .hero-container {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                grid-template-columns: 2fr 3fr;
+            }
+            .height{
+                height: calc(100vh - 9vh);              
+            }
+            .education{
+            grid-template-columns: repeat(auto-fit, 30%);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div id="nav">
+            <div class="nav-brand" id="navbrand">Sriram Aalapati</div>
+            <div class="mobile-nav" id="mobile-nav">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="nav-list largenav LINKS">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mobilemenu LINKS mobilelinks" id="mobilemenu">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-container height bordercolor" id="hero">
+        <div class="hero-img">
+            <img src="./unnamed.png" alt="Sriram Aalapati" />
+        </div>
+        <div class="hero-text">
+            <h2>Who I Am? 🤔</h2>
+            <h1>Hello👋, I'm Sriram Aalapati</h1>
+            <br />
+            <p>- Currently pursuing a degree in Computer Science and Data Science.</p>
+            <p>- Skilled in building interactive, responsive, and user-centric web applications.</p>
+            <p>- Actively contributing to open-source projects and collaborating with the developer community.</p>
+            <p>- Passionate about artificial intelligence and emerging technologies.</p>
+            <p>- Dedicated to continuous learning and exploring innovative solutions.</p>
+            <br /><br />
+            <a href="#" class="button">View my Skills</a>
+        </div>
+    </div>
+
+    <div class="section-2 height bordercolor" id="education">
+        <h1>Learning & Growth</h1>
+        <div class="education">
+            <div class="edu-card">
+                <p class="course-name">B.Tech in Computer Science and Data Science(CSD)</p>
+                <p class="course-year">year : 2022 - 2026</p>
+                <p class="institution">College : Sasi Institute of Technology and Engineering</p>
+                <p class="location"><i class="fa-solid fa-location-dot"></i> Tadepalligudem</p>
+                <p class="aggregate">Aggregate : 75%</p><br>
+                <p class="description">
+                    Summary: <br>
+                    I am currently pursuing a B.Tech in Computer Science and Data Science (CSD) from Sasi Institute of Technology and Engineering, Tadepalligudem, with an expected graduation year of 2026. This program has provided me with a comprehensive understanding of both computer science fundamentals and data science techniques. I have gained hands-on experience in programming, algorithms, machine learning, and data analysis. With a current aggregate of 75%, I have developed strong problem-solving skills and the ability to apply theoretical knowledge to real-world challenges. This academic journey is enhancing my ability to contribute to innovative projects in the fields of software development and data science.</p>
+            </div>
+            <div class="edu-card">
+                <p class="course-name">Intermediate (M.P.C)</p>
+                <p class="course-year">year : 2020 - 2022</p>
+                <p class="institution">College : Sasi Junior College</p>
+                <div class="location"><i class="fa-solid fa-location-dot"></i> Tadepalligudem</div>
+                <p class="aggregate">Aggregate : 94.1%</p><br>
+                <p class="description">
+                    Summary: <br>
+                    During my Intermediate studies (M.P.C) at Sasi Junior College, I built a strong foundation in core subjects like Mathematics, Physics, and Chemistry, which significantly enhanced my analytical and logical reasoning skills. The rigorous coursework and practical applications in these subjects developed my problem-solving abilities, allowing me to approach challenges with confidence. I gained proficiency in quantitative analysis and critical thinking, which has prepared me for advanced studies in technology and data science. Through disciplined learning, I achieved academic excellence, maintaining an impressive 94.1% aggregate.</p>
+            </div>
+            <div class="edu-card">
+                <p class="course-name">S.S.C</p>
+                <p class="course-year">year : 2020</p>
+                <p class="institution">School:Narayana English Medium School</p>
+                <p class="locationn"><i class="fa-solid fa-location-dot"></i> Neeladripuram</p>
+                <p class="aggregate">Aggregate : 93.1%</p><br>
+                <p class="description">
+                    Summary: <br>
+                    In 2020, I completed my Secondary School Certificate (S.S.C) from Narayana English Medium School, Neeladripuram, where I developed a strong academic foundation. My studies focused on core subjects such as Mathematics, Science, and English, which honed my analytical and communication skills. I achieved a commendable 93.1% aggregate, demonstrating my commitment to academic excellence and my ability to perform under pressure. This experience not only strengthened my problem-solving abilities but also instilled a sense of discipline and dedication, laying the groundwork for my future academic and professional endeavors.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills bordercolor" id="skills">
+        <h2>What I know</h2>
+        <div class="skill">
+            <div class="skills1">
+                <i class="fa-brands fa-python"></i>
+                <p>Python</p>
+            </div>
+            <div class="skills1">
+                <i class="fa-solid fa-code"></i>
+                <p>Web Development</p>
+            </div>
+            <div class="skills1">
+                <i class="fa-brands fa-git-alt"></i>
+                <p>git and github</p>
+            </div>
+            <div class="skills1">
+                <i class="fa-brands fa-java"></i>
+                <p>Java</p>
+            </div>
+            <div class="skills1">
+                <i class="fa-brands fa-js"></i>
+                <p>Javascript</p>
+            </div>
+            <div class="skills1">
+                <i class="fa-brands fa-css3"></i>
+                <p>CSS</p>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="projects bordercolor" id="projects">
+        <h2>Show Case of my works</h2>
+        <p>I will update soon...</p>
+    </div>
+    
+   
+    <div class="contact" id="contact">
+        <h2>Get in Touch</h2>
+        <div class="contactme">
+            <div class="link"><a href="https://github.com/SriramAalapati" style="text-decoration: none;"><i class="fa-brands fa-github" style="color: white;"></i></a></div>
+            <div class="link"><a href="mailto:sriram.aalapati@sasi.ac.in" style="text-decoration: none;"><i class="fa-solid fa-envelope"></i></a></div>
+            <div class="link"><a href="https://www.linkedin.com/in/sriramaalapati/" style="text-decoration: none;"><i class="fa-brands fa-linkedin" style="color: blue;"></i></a></div>
+        </div>
+    </div>
+    <footer>
+       <p style="text-align: center;"> kindly share your thoughts, opinions, ideas on this portfolio. Suggest changes <a style="text-decoration: none;color:var(--text-color);" href="mailto:sriram.aalapati@sasi.ac.in?subject=Suggested Changes&body=Please describe the changes you'd like to suggest."> Click here</a></p>
+       <p style="text-align: center;">&copy; 2024 Sriram Aalapati.</p>
+    </footer>
+    <script src="./navbar.js"></script>
+</body>
+
+</html>

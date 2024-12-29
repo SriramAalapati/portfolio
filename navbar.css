@@ -1,0 +1,132 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(16, 37, 44);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--text-color);
+}
+
+body.open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mobile-nav {
+  margin-right: 1vw;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  cursor: pointer;
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    height: 5px;
+    width: 30px;
+    background-color: rgb(0, 221, 255);
+    transition: all 0.2s;
+    border-radius: 30px;
+  }
+}
+
+.open .bar1 {
+  transform: rotate(45deg) translate(0, 5px);
+}
+
+.open .bar2 {
+  display: none;
+}
+
+.open .bar3 {
+  transform: rotate(-45deg) translate(1px, -6px);
+}
+
+#nav {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+
+  .nav-brand {
+    font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+    margin-left: 1vw;
+    color: rgb(0, 221, 255);
+    transition: all 0.6s;
+
+    @starting-style {
+      transform: scale(0.2);
+    }
+  }
+
+  .nav-list ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 1vw;
+    column-gap: 15px;
+
+    li {
+      font-size: clamp(15px, 25px, 30px);
+      text-decoration: none;
+      transition: all 0.3s;
+      @starting-style {
+        transform: scale(0.2) translateY(200px);
+      }
+    }
+
+    li a {
+      text-decoration: none;
+      color: inherit;
+      color: var(--text-color);
+      transition: all 0.6s;
+      @starting-style {
+        transform: scale(0.2);
+      }
+    }
+
+    li:hover {
+      color: rgb(0, 30, 255);
+      transform: scale(1.2);
+    }
+  }
+}
+
+.mobilemenu {
+  z-index: 100;
+  position: relative;
+  overflow: hidden;
+  display: none;
+  
+  transition: all 0.4s;
+  background-color: var(--mobile-menu-bgcolor);
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  ul li a {
+    font-size: 25px;
+    color: var(--mobile-menu-color);
+    text-decoration: none;
+  }
+
+  ul li a:active {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  @starting-style {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
