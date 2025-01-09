@@ -116,7 +116,7 @@ body.open {
 
   ul li a {
     font-size: 25px;
-    color: var(--mobile-menu-color);
+    color: white;
     text-decoration: none;
   }
 
