@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.masked {
+    -webkit-mask-image: url('../src/assets/mask.svg'); /* Added the -webkit- prefix */
+    mask-image: url('../src/assets/mask.svg');
+    -webkit-mask-size: 200px; /* Added the -webkit- prefix */
+    mask-size: 100px;
+    mask-repeat: no-repeat;
+    mask-position: 50px 50px;
+    color: rgb(241, 228, 228);
+    background: rgb(179, 36, 36);
+    
+}

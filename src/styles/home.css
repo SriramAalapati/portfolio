@@ -1,0 +1,12 @@
+@reference "../index.css";
+
+.masked {
+    -webkit-mask-image: url('../assets/mask.svg'); /* Added the -webkit- prefix */
+    mask-image: url('../assets/mask.svg');
+    -webkit-mask-size: 0px; /* Added the -webkit- prefix */
+    mask-size: 0px;
+    mask-repeat: no-repeat;
+    background-color: blue;
+    color: white;
+    
+}

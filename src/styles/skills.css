@@ -1,0 +1,12 @@
+.skill_main .skill_mask,.contact_main .contact_mask{
+    clip-path: inset(50% 0 50% 0);
+    position: absolute;
+    top: 0;
+    transition: clip-path .4s cubic-bezier(.165,.84,.44,1);
+    /* background: #eb5939; */
+}
+.skill_main:hover .skill_mask,.contact_main:hover .contact_mask{
+    clip-path: inset(0);
+    transition: clip-path .4s cubic-bezier(.165,.84,.44,1);
+    
+}
