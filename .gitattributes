@@ -1,0 +1,8 @@
+# Tell GitHub to ignore the dist folder for language stats
+dist/ linguist-vendored
+
+# Force correct language detection
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
