@@ -7,7 +7,7 @@ import azure from '../assets/Azure.png'
 import ts from '../assets/TypeScript.png';
 import js from '../assets/JavaScript.png';
 import linux from '../assets/Linux.png';
-import java from '../assets/java.png';
+import java from '../assets/Java.png';
 import mongodb from '../assets/MongoDB.png';
 import numpy from '../assets/NumPy.png';
 import pandas from '../assets/Pandas.png';
