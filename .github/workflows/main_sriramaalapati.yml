@@ -64,4 +64,5 @@ jobs:
         with:
           app-name: 'sriramaalapati'  # Azure Web App name
           slot-name: 'Production'     # Deploy to Production (no slots available in Free tier)
-          package: ./dist             # Deploy the contents of the dist folder
+          package: .             # Deploy the contents of the dist folder
+
